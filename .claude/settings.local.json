@@ -10,7 +10,8 @@
       "Bash(npx nx:*)",
       "Bash(npm install)",
       "Bash(timeout:*)",
-      "Bash(ping:*)"
+      "Bash(ping:*)",
+      "Bash(npm install:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
