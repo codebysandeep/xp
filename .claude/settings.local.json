@@ -7,7 +7,10 @@
       "Bash(findstr:*)",
       "Bash(cat:*)",
       "Bash(curl:*)",
-      "Bash(npx nx:*)"
+      "Bash(npx nx:*)",
+      "Bash(npm install)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

@@ -1,0 +1,32 @@
+{
+  "name": "apps-clients-sadhtaxadv",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/clients/sadhtaxadv/src",
+  "projectType": "application",
+  "tags": ["type:app", "platform:web"],
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "astro dev",
+        "cwd": "apps/clients/sadhtaxadv"
+      }
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "astro build",
+        "cwd": "apps/clients/sadhtaxadv"
+      },
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "preview": {
+      "executor": "nx:run-commands",
+      "dependsOn": ["build"],
+      "options": {
+        "command": "astro preview",
+        "cwd": "apps/clients/sadhtaxadv"
+      }
+    }
+  }
+}

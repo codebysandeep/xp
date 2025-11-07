@@ -16,9 +16,11 @@
     "typescript": "~5.9.2"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/**/*"
   ],
   "dependencies": {
+    "astro": "^5.15.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
