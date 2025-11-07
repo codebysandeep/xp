@@ -1,6 +1,15 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(nul)",
+      "Bash(dir /b /a-d README.md 2)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(cat:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "nx-mcp"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }
