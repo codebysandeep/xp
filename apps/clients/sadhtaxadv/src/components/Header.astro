@@ -1,0 +1,99 @@
+---
+import { Button } from './ui/button';
+import ThemeToggle from './ThemeToggle';
+---
+
+<!-- Top Info Bar -->
+<div class="bg-primary/5 border-b border-primary/10">
+	<div class="container mx-auto px-4">
+		<div class="flex justify-end items-center py-2 text-sm text-foreground/70">
+			<div class="flex gap-6">
+				<a href="tel:+1-555-123-4567" class="flex items-center gap-2 hover:text-secondary transition">
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+					</svg>
+					<span>(555) 123-4567</span>
+				</a>
+				<a href="https://maps.google.com" target="_blank" class="flex items-center gap-2 hover:text-secondary transition">
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+					</svg>
+					<span>123 Financial Plaza, Albany, NY 12207</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Main Header -->
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+	<div class="container mx-auto px-4">
+		<div class="flex items-center justify-between py-4">
+			<!-- Logo -->
+			<div class="flex items-center">
+				<a href="/" class="flex items-center gap-3">
+					<img src="/STA.png" alt="STA Tax Advisory Inc." class="h-12 w-auto" />
+				</a>
+			</div>
+
+			<!-- Navigation -->
+			<nav class="hidden lg:flex items-center gap-8">
+				<a href="#services" class="text-base font-medium text-foreground hover:text-secondary transition">Services</a>
+				<a href="#about" class="text-base font-medium text-foreground hover:text-secondary transition">About</a>
+				<a href="#process" class="text-base font-medium text-foreground hover:text-secondary transition">Process</a>
+				<a href="#faq" class="text-base font-medium text-foreground hover:text-secondary transition">FAQ</a>
+			</nav>
+
+			<!-- CTA & Theme Toggle -->
+			<div class="flex items-center gap-4">
+				<ThemeToggle client:load />
+				<Button asChild class="hidden md:inline-flex bg-secondary hover:bg-secondary/90">
+					<a href="#contact">Contact</a>
+				</Button>
+
+				<!-- Mobile Menu Button -->
+				<button
+					id="mobile-menu-button"
+					class="lg:hidden p-2 hover:bg-gray-100 rounded-md transition"
+					aria-label="Toggle menu"
+				>
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<!-- Mobile Menu -->
+		<div id="mobile-menu" class="hidden lg:hidden pb-4 border-t">
+			<nav class="flex flex-col gap-4 pt-4">
+				<a href="#services" class="text-base font-medium text-foreground hover:text-secondary transition">Services</a>
+				<a href="#about" class="text-base font-medium text-foreground hover:text-secondary transition">About</a>
+				<a href="#process" class="text-base font-medium text-foreground hover:text-secondary transition">Process</a>
+				<a href="#faq" class="text-base font-medium text-foreground hover:text-secondary transition">FAQ</a>
+				<Button asChild class="w-full bg-secondary hover:bg-secondary/90">
+					<a href="#contact">Contact</a>
+				</Button>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<script>
+	// Mobile menu toggle
+	const menuButton = document.getElementById('mobile-menu-button');
+	const mobileMenu = document.getElementById('mobile-menu');
+
+	menuButton?.addEventListener('click', () => {
+		mobileMenu?.classList.toggle('hidden');
+	});
+
+	// Close mobile menu when clicking a link
+	const mobileLinks = mobileMenu?.querySelectorAll('a');
+	mobileLinks?.forEach(link => {
+		link.addEventListener('click', () => {
+			mobileMenu?.classList.add('hidden');
+		});
+	});
+</script>

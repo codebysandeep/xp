@@ -11,7 +11,10 @@
       "Bash(npm install)",
       "Bash(timeout:*)",
       "Bash(ping:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(powershell -Command \"(Get-Content ''C:\\Sandeep New\\Projects\\Professional\\xp\\apps\\clients\\sadhtaxadv\\src\\pages\\index.astro'' | Measure-Object -Line).Lines\")",
+      "Bash(powershell -Command \"Get-Content ''C:\\Sandeep New\\Projects\\Professional\\xp\\apps\\clients\\sadhtaxadv\\src\\pages\\index.astro'' -Tail 20\")",
+      "Bash(powershell:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

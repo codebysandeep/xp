@@ -18,16 +18,24 @@ export default {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          DEFAULT: '#03045e',
+          foreground: '#ffffff',
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          DEFAULT: '#0077b6',
+          foreground: '#ffffff',
+        },
+        success: {
+          DEFAULT: '#6a994e',
+          foreground: '#ffffff',
+        },
+        error: {
+          DEFAULT: '#c1121f',
+          foreground: '#ffffff',
         },
         destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+          DEFAULT: '#c1121f',
+          foreground: '#ffffff',
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
@@ -45,6 +53,10 @@ export default {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+      },
+      fontFamily: {
+        headline: ['Merriweather', 'serif'],
+        body: ['"Segoe UI"', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
       },
       borderRadius: {
         lg: 'var(--radius)',
