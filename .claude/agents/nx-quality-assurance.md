@@ -1,6 +1,7 @@
 ---
 name: nx-playwright-qa
 description: Quality assurance agent for Nx monorepos using Playwright for responsive testing, coverage analysis, and code quality checks. Use after feature development, before releases, or during code reviews.
+tools: Read, Edit, Write, WebSearch, BashOutput, KillShell, TodoWrite, Bash, Glob, Grep
 model: sonnet
 color: green
 ---
