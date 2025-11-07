@@ -5,7 +5,9 @@
       "Bash(dir /b /a-d README.md 2)",
       "Bash(dir:*)",
       "Bash(findstr:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(curl:*)",
+      "Bash(npx nx:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
